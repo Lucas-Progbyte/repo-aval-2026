@@ -18,6 +18,26 @@ describe('calcularMedia', () => {
   test('lança erro quando nenhuma nota é informada', () => {
     assert.throws(() => calcularMedia([]), /Informe ao menos uma nota/);
   });
+
+  test('lança erro para nota negativa', () => {
+    assert.throws(() => calcularMedia([-1]), /Nota inválida/);
+  });
+
+  test('lança erro para nota maior que 10', () => {
+    assert.throws(() => calcularMedia([11]), /Nota inválida/);
+  });
+
+  test('lança erro para valor que não é número', () => {
+    assert.throws(() => calcularMedia([NaN]), /Nota inválida/);
+  });
+
+  test('aceita nota mínima igual a 0', () => {
+    assert.doesNotThrow(() => calcularMedia([0]));
+  });
+
+  test('aceita nota máxima igual a 10', () => {
+    assert.doesNotThrow(() => calcularMedia([10]));
+  });
 });
 
 describe('obterSituacao', () => {
@@ -26,7 +46,7 @@ describe('obterSituacao', () => {
   });
 
   test('retorna "Aprovado" para média igual a 7', () => {
-  assert.equal(obterSituacao(7), 'Aprovado');
+    assert.equal(obterSituacao(7), 'Aprovado');
   });
 
   test('retorna "Recuperação" para média entre 5 e 7', () => {
