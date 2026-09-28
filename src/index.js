@@ -5,7 +5,7 @@ const notas = process.argv.slice(2).map(Number);
 try {
   const media = calcularMedia(notas);
 
-  console.log(`Média: ${media}`);
+  console.log(`Média: ${media.toFixed(1)}`);
   console.log(`Situação: ${obterSituacao(media)}`);
 } catch (erro) {
   console.error(`Erro: ${erro.message}`);
