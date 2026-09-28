@@ -21,13 +21,12 @@ export function calcularMedia(notas) {
     throw new Error('Informe ao menos uma nota.');
   }
 
-  let soma = 0;
-  for (let i = 0; i < notas.length; i++) {
-    if (!ehNotaValida(notas[i])) {
-      throw new Error(`Nota inválida: ${notas[i]}. Use valores entre ${NOTA_MINIMA} e ${NOTA_MAXIMA}.`);
+  const soma = notas.reduce((acc, nota) => {
+    if (!ehNotaValida(nota)) {
+      throw new Error(`Nota inválida: ${nota}. Use valores entre ${NOTA_MINIMA} e ${NOTA_MAXIMA}.`);
     }
-    soma = soma + notas[i];
-  }
+    return acc + nota;
+  }, 0);
 
   return soma / notas.length;
 }
