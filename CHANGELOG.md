@@ -5,6 +5,19 @@ Todas as mudanças relevantes deste projeto são documentadas neste arquivo.
 O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e o projeto adota o [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
+## [1.1.0] - 2026-09-28
+
+### Adicionado
+
+- Situação "Aprovado com distinção".
+- Testes para notas inválidas e limites de notas.
+
+### Alterado
+
+- Cálculo da média sem o laço `for`.
+- Exibição da média com uma casa decimal.
+- Aprovação para médias iguais a 7,0.
+
 ## [1.0.0] - 2026-09-14
 
 ### Adicionado
