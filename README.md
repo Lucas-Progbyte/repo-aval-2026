@@ -19,6 +19,7 @@ Conventional Commits, merges, resolução de conflitos, versionamento e Pull Req
 | Nome | Usuário do GitHub |
 | Lucas Acosta | Lucas-Progbyte |
 | Igor Henrique | igorzim31 |
+| Carlos Zambrano | Zambranoo |
 
 ## Sumário
 
